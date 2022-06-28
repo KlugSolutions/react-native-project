@@ -4,89 +4,137 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
-  Linking,
 } from 'react-native';
 
 const App/*: () => Node */ = () => {
-  const [name, setName] = useState('Nieznajomy')
-  const changeNameState = () => {
-    setName('Tomasz')
-  }
-  const buttonClick = () => {
-    setButtonClicked(true)
-    Linking.openURL('https://google.com')
-  }
-
-  const [buttonClicked, setButtonClicked] = useState(false)
-
-  const [counter, setCounter] = useState(0)
-
-  //Zadanie zaliczeniowe, ustawić tak żeby licznik się zwiększał o 1 z każdym kliknięciem
-
-  const incrementCounter = () => {
-    setCounter(counter + 1)
-  }
-
-  const decrementCounter = () => {
-    setCounter(counter - 1)
-  }
 
   return (
     <View style={styles.mainView}>
-      <Text style={styles.text}>Hello {name}</Text>
-      <View style={styles.buttonView}>
-        <Button
-          title='click'
-          onPress={buttonClick}
-        ></Button>
+      <View style={styles.columnA}>
+        <View style={styles.first}>
+          <Text style={styles.text}>1</Text>
+        </View>
+
+        <View style={styles.rowA}>
+          <View style={styles.second}>
+            <Text style={styles.text}>2</Text>
+          </View>
+          <View style={styles.column}>
+            <View style={styles.third}>
+              <Text style={styles.text}>3</Text>
+            </View>
+            <View style={styles.fourth}>
+              <Text style={styles.text}>4</Text>
+            </View>
+          </View>
+        </View>
+        <View style={styles.rowB}>
+          <View style={styles.fifth}>
+            <Text style={styles.text}>5</Text>
+          </View>
+          <View style={styles.sixth}>
+            <Text style={styles.text}>6</Text>
+          </View>
+          <View style={styles.seventh}>
+            <Text style={styles.text}>7</Text>
+          </View>
+        </View>
+
+
+        <View style={styles.eighth}>
+          <Text style={styles.text}>8</Text>
+        </View>
       </View>
-      <View style={styles.buttonView}>
-        <Button
-          title='Zmień stan'
-          onPress={changeNameState}
-        ></Button>
-      </View>
-      <Text style={styles.text}>Licznik : {counter}</Text>
-      <View style={styles.buttonView}>
-        <Button
-          title="Zwiększ licznik"
-          onPress={incrementCounter}
-        ></Button>
-      </View>
-      <View style={styles.buttonView}>
-        <Button
-          title="Zmniejsz licznik"
-          onPress={decrementCounter}
-        ></Button>
-      </View>
-      <Text style={styles.text}>
-        {buttonClicked ? "Przycisk został wciśnięty" : "Przycisk nie został wciśnięty"}
-      </Text>
     </View>
+
+
   );
 };
 
 const styles = StyleSheet.create({
   mainView: {
-    backgroundColor: '#b3d4fc',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: '100%',
+    width: '100%',
+
   },
   text: {
-    backgroundColor: '#387094',
-    color: '#ffffff',
-    width: '80%',
-    height: 30,
     textAlign: 'center',
     textAlignVertical: 'center',
-    margin: 10,
-    borderRadius: 10,
+    color: "#000",
   },
-  buttonView: {
-    margin: 10,
-    borderRadius: 10,
+  rowA: {
+    flexDirection: 'row',
+    width: '100%',
+    height: '20%',
+  },
+  rowB: {
+    flexDirection: 'row',
+    width: '100%',
+    height: '30%',
+  },
+  columnA: {
+    flexDirection: 'column',
+    width: '100%',
+    height: '100%',
+  },
+  column: {
+    flexDirection: 'column',
+    width: '100%',
+  
+  },
+
+  first: {
+    height: '40%',
+    width: '100%',
+    backgroundColor: '#FFFF00',
+  },
+  second: {
+
+
+    width: '40%',
+    backgroundColor: '#ADD8E6',
+  },
+  third: {
+
+    height: '50%',
+    width: '60%',
+    backgroundColor: '#90ee90',
+
+  },
+  fourth: {
+
+    height: '50%',
+    width: '60%',
+    backgroundColor: '#d3D3D3',
+
+  },
+  fifth: {
+
+
+    width: '20%',
+    backgroundColor: '#FFD580',
+
+  },
+  sixth: {
+
+
+    width: '60%',
+    backgroundColor: '#90ee90',
+
+  },
+  seventh: {
+
+
+    width: '20%',
+    backgroundColor: '#d3D3D3',
+
+  },
+  eighth: {
+
+    height: '100%',
+    width: '100%',
+    backgroundColor: '#a9a9a9',
+
   },
 });
 
