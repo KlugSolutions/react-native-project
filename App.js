@@ -52,12 +52,13 @@ const App/*: () => Node */ = () => {
 };
 
 const styles = StyleSheet.create({
-  mainView: {
-    height: '100%',
-    width: '100%',
-
-  },
+  /* mainView: {
+     height: '100%',
+     width: '100%',
+ 
+   },*/
   text: {
+    flex: 1,
     textAlign: 'center',
     textAlignVertical: 'center',
     color: "#000",
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
   column: {
     flexDirection: 'column',
     width: '100%',
-  
+
   },
 
   first: {
@@ -131,7 +132,7 @@ const styles = StyleSheet.create({
   },
   eighth: {
 
-    height: '100%',
+    height: '10%',
     width: '100%',
     backgroundColor: '#a9a9a9',
 
