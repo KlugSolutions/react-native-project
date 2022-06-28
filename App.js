@@ -9,7 +9,7 @@ import {
 const App/*: () => Node */ = () => {
 
   return (
-    <View style={styles.mainView}>
+    //<View style={styles.mainView}>
       <View style={styles.columnA}>
         <View style={styles.first}>
           <Text style={styles.text}>1</Text>
@@ -45,7 +45,7 @@ const App/*: () => Node */ = () => {
           <Text style={styles.text}>8</Text>
         </View>
       </View>
-    </View>
+   // </View>
 
 
   );
